@@ -12,6 +12,8 @@ password=driver.find_element(By.XPATH,'//input[@data-qa="login-password"]')
 password.send_keys("1234sho")
 loginbtn=driver.find_element(By.XPATH,'//button[@data-qa="login-button"]')
 loginbtn.click()
+driver.save_screenshot("login_success.png")
+print("Screenshot saved successfully")
 userName = driver.find_element(By.XPATH, "//ul[@class = 'nav navbar-nav']/descendant::a[text() = ' Logged in as ']")
 print(userName.text)
 checkuser = userName.text
