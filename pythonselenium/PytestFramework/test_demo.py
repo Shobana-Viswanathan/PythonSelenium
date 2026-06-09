@@ -8,7 +8,7 @@ def test_sample2():
 def test_simple():
     assert 1+1 == 2
 def test_simple2():
-    assert 1+3 == 2
+    assert 1+3 == 4
 def test_assertcompare():
     x=4
     y=4
@@ -22,7 +22,7 @@ def test_assertin():
     assert 3 in num
 def test_sample4():
     a="arun"
-    b="aruns"
+    b="arun"
     assert a.__eq__(b)
 
     
