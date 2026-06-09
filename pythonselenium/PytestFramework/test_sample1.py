@@ -20,6 +20,6 @@ def test_assertnotequal():
     assert x!=y
 @pytest.mark.xfail
 def test_sample4():
-    a="arun"
-    b="aruns"
+    a="shobs"
+    b="shobs"
     assert a.__eq__(b)
