@@ -10,6 +10,7 @@ import Utilities.logCreater
 @pytest.mark.usefixtures("setup_and_teardown")
 class Testlogin:
     logger = Utilities.logCreater.log_creator()
+    
     def test_validLogin(self):
         email = read_config.get_data("Login credentials","email")
         password = read_config.get_data("Login credentials","password")
