@@ -11,7 +11,7 @@ import Utilities.logCreater
 @pytest.mark.usefixtures("setup_and_teardown")
 class TestSearch:
     logger = Utilities.logCreater.log_creator()
-    @pytest.mark.order(1)
+    @pytest.mark.dependency(depends=["valid_login"])
     def test_validproduct(self):
         global logger
         validsearch = excelReader.get_data("TestData/SearchData.xlsx","Search")
@@ -23,7 +23,7 @@ class TestSearch:
         assert self.driver.find_element(By.LINK_TEXT, "HP LP3065").is_displayed()
         self.logger.info("Search product displayed")
 
-    @pytest.mark.order(2)     
+    @pytest.mark.dependency(depends=["valid_login"])  
     def test_invalidproduct(self):
         invalidsearch = excelReader.get_data("TestData/SearchData.xlsx","Search")
         search_term = invalidsearch[1]
